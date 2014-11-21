@@ -1,6 +1,6 @@
 <div class="container">
   <h1>Welcome to Sinatra!</h1>
-  <p>Hello, <%= em("world!") %></p>
+  <p>Hello, <%= ("world!") %></p>
 
   <table>
     <tr>
@@ -8,7 +8,7 @@
       <th>File Location</th>
     </tr>
     <tr>
-      <td>This view file</td>
+      <td><a href="/address/new">New Address</a></td>
       <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
     </tr>
     <tr>
