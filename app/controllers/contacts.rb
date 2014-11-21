@@ -29,7 +29,7 @@ get '/contacts/:id/edit' do |id|
   erb :'contacts/edit'
 end
 
-post '/contacts/:id' do # works with post but not put?
+post '/contacts/:id' do # works with post but not with put?
   @contact = Contact.find(params[:id])
   @contact.update(params[:contact])
   redirect '/contacts'
@@ -40,5 +40,5 @@ delete '/contacts/:id' do
   @contact.destroy
   redirect '/contacts'
 end
-
-# Can we use pry with this?
+# <input name="_method" type="hidden" value="delete" />
+    # <input type="submit" value="DELETE" />
