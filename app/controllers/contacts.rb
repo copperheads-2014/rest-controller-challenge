@@ -23,7 +23,7 @@ get '/contacts/:contact_id' do
   erb :'contacts/show'
 end
 
-post '/contacts/:contact_id' do
+put '/contacts/:contact_id' do
   @contact = Contact.find(params[:contact_id])
   @contact.update(params[:contact])
   redirect '/contacts'

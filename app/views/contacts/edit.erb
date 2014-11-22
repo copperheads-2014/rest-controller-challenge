@@ -5,7 +5,7 @@
     <input type="submit" value="DELETE" />
   </form>
   <form action="/contacts/<%= @contact.id %>" method="POST">
-    <input type="hidden" name="method" value="put">
+    <input type="hidden" name="_method" value="put">
     <%= erb :"contacts/_form", locals: { contact: @contact } %>
   </form>
 </div>
