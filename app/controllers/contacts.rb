@@ -29,7 +29,7 @@ get '/contacts/:id/edit' do |id|
   erb :'contacts/edit'
 end
 
-post '/contacts/:id' do # works with post but not with put?
+put '/contacts/:id' do # works with post but not with put?
   @contact = Contact.find(params[:id])
   @contact.update(params[:contact])
   redirect '/contacts'
