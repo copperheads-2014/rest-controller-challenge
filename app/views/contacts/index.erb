@@ -1,9 +1,13 @@
 <div class="container">
   <h1>Contacts</h1>
-  <% @contacts.each do |contact| %>
+  <% @contact.each do |contact| %>
     <ul>
-      <li><a href="/contacts/<%=contact.id %>"><%= contact.name %></a></li>
-      <li><%= contact.email %></li>
+      <li><a href="/contacts/<%= contact.id %>"><%= contact.name %></a>
+        <form action="/contacts/<%= contact.id %>" method="post">
+          <input type="hidden" name="_method" value = "delete">
+          <input type="submit" value="delete this asshole">
+        </form></li>
+<!--       <li><%= contact.email %></li> -->
     </ul>
     <hr>
   <% end %>
