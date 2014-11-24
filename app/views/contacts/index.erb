@@ -4,6 +4,13 @@
     <ul>
       <li><a href="/contacts/<%=contact.id %>"><%= contact.name %></a></li>
       <li><%= contact.email %></li>
+     <!--  is this the best place for the delete form?? -->
+      <li>
+      	<form action="/contacts/<%= contact.id %>" method="post">
+      		<input type="hidden" name="_method" value="delete">
+      		<input type="submit" value="Delete contact">
+      	</form>
+      </li>
     </ul>
     <hr>
   <% end %>
